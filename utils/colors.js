@@ -1,0 +1,15 @@
+export const gray = "#dfdfdf";
+export const darkGray = "#aaa";
+export const textGray = "#666";
+export const red = "#c30000";
+export const lightGreen = "#cdeccd";
+export const orange = "#f26f28";
+export const blue = "#4e4cb8";
+export const pink = "#b93fb3";
+export const gainsboro = "#dcdcdc";
+export const steelblue = "#4682b4";
+export const black = "#000";
+export const white = "#fff";
+export const babyblue = "#9AC4F8";
+export const darkblue = "rgba(0,0,63,0.7)";
+export const green = "#3CB371";
