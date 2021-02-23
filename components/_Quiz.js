@@ -7,12 +7,15 @@ import { blue, green, red } from "../utils/colors";
 import FlashButton from "./FlashButton";
 import { Button } from "react-native-paper";
 import Card from "./Card";
+import {
+  clearLocalNotifications,
+  setLocalNotifications,
+} from "../utils/helpers";
 
-import { setLocalNotification, clearLocalNotification } from "../utils/helpers";
 const _Quiz = (props) => {
   React.useEffect(() => {
     // Update the document title using the browser API
-    clearLocalNotification().then(setLocalNotification);
+    clearLocalNotifications().then(setLocalNotifications);
   });
   //________________________________________________________
   const answer = {
@@ -89,10 +92,8 @@ const _Quiz = (props) => {
         </View>
       ) : (
         <View style={styles.messageContainer}>
-          <Text style={[styles.finalMessage, resultStyle]}>Quiz Complete!</Text>
-          <Text style={[styles.finalMessage, resultStyle]}>
-            You Got {result}% of correct answers
-          </Text>
+          <Text style={resultStyle}>Quiz Complete!</Text>
+          <Text style={resultStyle}>You Got {result}% of correct answers</Text>
           <View>
             <Button
               icon="keyboard-backspace"

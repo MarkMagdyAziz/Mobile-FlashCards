@@ -11,7 +11,7 @@ import { Provider } from "react-redux";
 import { steelblue, gray } from "./utils/colors";
 import { NavigationContainer } from "@react-navigation/native";
 import { Provider as PaperProvider } from "react-native-paper";
-import { setLocalNotification } from "./utils/helpers";
+import { setLocalNotifications } from "./utils/helpers";
 
 const store = createStore(rootReducer, applyMiddleware(thunk, logger));
 
@@ -29,10 +29,10 @@ function FlashCardsStatusBar() {
 export default function App() {
   const windowWidth = useWindowDimensions().width;
 
-  // React.useEffect(() => {
-  //   // Update the document title using the browser API
-  //   setLocalNotification();
-  // });
+  React.useEffect(() => {
+    // Update the document title using the browser API
+    setLocalNotifications();
+  });
   return (
     <Provider store={store}>
       <PaperProvider>

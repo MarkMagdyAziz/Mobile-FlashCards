@@ -9,7 +9,7 @@ import {
 } from "react-native";
 import { TextInput } from "react-native-paper";
 import FlashButton from "./FlashButton";
-import { steelblue, white, gray } from "./../utils/colors";
+import { steelblue, white } from "./../utils/colors";
 import { connect } from "react-redux";
 import { addCardToDeck } from "./../actions/index";
 import { _addCardToDeck } from "../utils/api";

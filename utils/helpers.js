@@ -44,15 +44,15 @@ export function setLocalNotifications() {
 
             Notifications.scheduleNotificationAsync({
               content: {
-                title: "👋 Log your stats",
-                body: "Hey! Don't forget to log your stats for today!",
+                title: "👋 It's time to study",
+                body: "Hey! Don't forget to study today!",
                 sound: true,
               },
-              // trigger: notificationDate,
-              trigger: {
-                seconds: 10,
-                repeats: true,
-              },
+              trigger: notificationDate,
+              // trigger: {
+              //   seconds: 10,
+              //   repeats: true,
+              // },
             });
 
             AsyncStorage.setItem(NOTIFICATION_KEY, JSON.stringify(true));
