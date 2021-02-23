@@ -12,11 +12,11 @@
 
 - git clone https://github.com/MarkMagdyAziz/Mobile-FlashCards
 ```bash
-### Install dependencies
-##### yarn install
+- Install dependencies
+- yarn install
 
-### Run the app
-##### expo start
+- Run the app
+- expo start
 ```  
 #### On the Expo page that will open automatically
 ##### To run the app, choose one of these options
