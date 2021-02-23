@@ -13,15 +13,15 @@
 - git clone https://github.com/MarkMagdyAziz/Mobile-FlashCards
 ```bash
 ### Install dependencies
-$ yarn install
+##### yarn install
 
 ### Run the app
-$ expo start
+##### expo start
 ```  
 #### On the Expo page that will open automatically
 ##### To run the app, choose one of these options
- $ Scan the QR code  with the Expo app (Android) or the Camera app (iOS).       
- $ Press a for Android emulator, or w to run on web.
- $ Press e to send a link to your phone with email
- $ Press w │ open in the browser
+ ###### Scan the QR code  with the Expo app (Android) or the Camera app (iOS).       
+ ###### Press a for Android emulator, or w to run on web.
+ ###### Press e to send a link to your phone with email
+ ###### Press w │ open in the browser
 
