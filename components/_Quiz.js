@@ -13,10 +13,10 @@ import {
 } from "../utils/helpers";
 
 const _Quiz = (props) => {
-  React.useEffect(() => {
-    // Update the document title using the browser API
-    clearLocalNotifications().then(setLocalNotifications);
-  });
+  // React.useEffect(() => {
+  //   // Update the document title using the browser API
+  //   clearLocalNotifications().then(setLocalNotifications);
+  // });
   //________________________________________________________
   const answer = {
     CORRECT: "correct",
@@ -56,6 +56,7 @@ const _Quiz = (props) => {
   const handleFinishQuiz = () => {
     setCorrect(0);
     setIncorrect(0);
+    clearLocalNotifications().then(setLocalNotifications);
     return props.navigation.navigate("Decks");
     //console.log("Deck", deck.title);
   };

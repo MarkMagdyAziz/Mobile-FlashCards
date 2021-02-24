@@ -1,11 +1,17 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { decks } from "./_DATA";
+
 const DECKS_STORAGE_KEY = "MobileFlashcards:decks";
 
 // getDecks: return all of the decks along with their , questions, and answers.
 export const getDecks = async () => {
   try {
-    const decks = await AsyncStorage.getItem(DECKS_STORAGE_KEY);
-    return decks != null ? JSON.parse(decks) : null;
+    const data = await AsyncStorage.getItem(DECKS_STORAGE_KEY);
+    //return data != null ? JSON.parse(decks) : null;
+    if (data === null) {
+      AsyncStorage.setItem(DECKS_STORAGE_KEY, JSON.stringify(decks));
+    }
+    return data === null || undefined ? decks : JSON.parse(data);
   } catch (e) {
     console.warn("Error getDecks!", e);
   }
