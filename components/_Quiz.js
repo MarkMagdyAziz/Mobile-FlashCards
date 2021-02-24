@@ -27,6 +27,9 @@ const _Quiz = (props) => {
 
   const [correct, setCorrect] = React.useState(0);
   const [incorrect, setIncorrect] = React.useState(0);
+
+  const [cardHasBeenFlipped, setCardHasBeenFlipped] = React.useState(false);
+
   //_________________________End State_____________________________________
   const { deck } = props;
   const { questions } = deck;
@@ -45,6 +48,7 @@ const _Quiz = (props) => {
       setIncorrect(incorrect + 1);
       setIndex(index < lastIndex ? index + 1 : index);
     }
+    setCardHasBeenFlipped(!cardHasBeenFlipped);
   };
 
   const handleRestartQuiz = () => {
@@ -79,7 +83,12 @@ const _Quiz = (props) => {
     <View style={styles.quizContainer}>
       {deck.questions[index] ? (
         <View>
-          <Card index={index} deck={deck} card={deck.questions[index]} />
+          <Card
+            index={index}
+            deck={deck}
+            card={deck.questions[index]}
+            cardHasBeenFlipped={cardHasBeenFlipped}
+          />
           <View>
             <FlashButton
               title={"Correct"}

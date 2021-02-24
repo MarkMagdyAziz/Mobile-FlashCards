@@ -12,7 +12,7 @@ const Card = (props) => {
   };
   return (
     <View style={styles.card}>
-      {!flipCard ? (
+      {!flipCard && props.cardHasBeenFlipped === false ? (
         <Text style={styles.content}>Question:{card.question}</Text>
       ) : (
         <Text style={styles.content}>

@@ -37,11 +37,15 @@ class AddDeck extends Component {
     if (title === "") {
       return Alert.alert(" Add Deck Title!");
     }
+    //______________________________________________
     dispatch(addDeck(title));
     saveDeckTitle(title);
+    //_______________________________________________
+
+    navigation.navigate("DeckDetails", title);
+
+    //____________________________________________
     this.setState(() => ({ title: "" }));
-    navigation.goBack();
-    // navigation.navigate("DeckDetals", { title: deck.title });
   };
   render() {
     const { title } = this.state;
