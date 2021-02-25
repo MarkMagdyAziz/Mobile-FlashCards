@@ -64,6 +64,7 @@ const _Quiz = (props) => {
   const handleFinishQuiz = () => {
     setCorrect(0);
     setIncorrect(0);
+    setCardHasBeenFlipped(!cardHasBeenFlipped);
     clearLocalNotifications().then(setLocalNotifications);
     return props.navigation.navigate("Decks");
     //console.log("Deck", deck.title);
