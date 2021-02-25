@@ -50,12 +50,16 @@ const _Quiz = (props) => {
     }
     setCardHasBeenFlipped(!cardHasBeenFlipped);
   };
+  const resetQuestion = () => {
+    setCardHasBeenFlipped(!cardHasBeenFlipped);
+  };
 
   const handleRestartQuiz = () => {
     //todo
     setIndex(0);
     setCorrect(0);
     setIncorrect(0);
+    setCardHasBeenFlipped(!cardHasBeenFlipped);
   };
   const handleFinishQuiz = () => {
     setCorrect(0);
@@ -88,6 +92,7 @@ const _Quiz = (props) => {
             deck={deck}
             card={deck.questions[index]}
             cardHasBeenFlipped={cardHasBeenFlipped}
+            resetQuestion={() => resetQuestion()}
           />
           <View>
             <FlashButton

@@ -8,11 +8,12 @@ const Card = (props) => {
   const { card, index, deck } = props;
 
   const onPress = () => {
-    setFlipCard(!flipCard);
+    //setFlipCard(!flipCard);
+    props.resetQuestion();
   };
   return (
     <View style={styles.card}>
-      {!flipCard && props.cardHasBeenFlipped === false ? (
+      {props.cardHasBeenFlipped === false ? (
         <Text style={styles.content}>Question:{card.question}</Text>
       ) : (
         <Text style={styles.content}>
